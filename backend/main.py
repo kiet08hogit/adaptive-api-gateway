@@ -24,11 +24,9 @@ def classify_route(query: Query):
         return temp_cache
     response = route_request(query.query)
     result={
-        "query":query.query,
         "service":response[0],
         "response":response[1],
-        "latency_ms":round((time.time() - start_time) * 1000, 2),
-        "cache_hit":False
+        "latency_ms":round((time.time() - start_time) * 1000, 2)
     }
     save_to_cache(query.query, result.copy())
     return result
