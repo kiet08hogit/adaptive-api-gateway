@@ -6,7 +6,7 @@ from services.fallback_service import call_fallback_service
 
 
 def route_request(query: str):
-    search_keywords = ["search", "find", "look", "get", "fetch", "list", "show", "display"]
+    search_keywords = ["search", "find", "look", "get", "fetch", "list", "show", "display", "who", "what", "when", "where", "why", "how"]
     ai_keywords = ["ai", "intelligence", "smart", "cognitive", "neural", "learning", "predict", "classify", "analyze", "recommend", "suggest", "evaluate", "assess", "diagnose", "forecast", "estimate", "optimize", "plan", "schedule", "allocate", "assign", "manage", "coordinate", "control", "regulate", "monitor", "supervise", "guide", "assist", "support", "help"]
 
     query = query.lower()

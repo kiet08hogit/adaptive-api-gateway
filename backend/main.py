@@ -18,8 +18,6 @@ def classify_route(query: Query):
     start_time = time.time()
     temp_cache= get_from_cache(query.query)
     if temp_cache:
-        print("cache hit")
-        temp_cache["cache_hit"] = True
         temp_cache["latency_ms"] = round((time.time() - start_time) * 1000, 2)
         return temp_cache
     response = route_request(query.query)
